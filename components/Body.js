@@ -41,7 +41,7 @@ try {
 
     const filterTopRated = () => {
         const filteredList = listOfRestaurants.filter(
-            (res) => res.info?.avgRating > 4
+            (res) => res.info?.avgRating > 4.5
         );
         setFilteredRestaurants(filteredList);
     };
