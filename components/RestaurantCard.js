@@ -27,7 +27,9 @@ const RestaurantCard = ({ resData }) => {
                   <span className="span">{sla.deliveryTime} mins</span>
                   <p>{costForTwo}</p>
               </div> 
+
   );
+  
 };
 
 export default RestaurantCard;
