@@ -11,6 +11,7 @@
 # React Hooks
 (normal js utility function)
 -useState() -state variable in react
+
 -useEffect() -Fetching data , Subscribing to events ,Manually manipulating the DOM , Setting up timers
 
                Every render	    No array	On every re-render

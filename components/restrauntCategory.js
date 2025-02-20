@@ -1,20 +1,14 @@
-import ItemList from "./ItemList";
 import { useState } from "react";
+import ItemList from "./ItemList";
 
-const RestrauntCategory = ({ data }) => {
-    const [showItems, setShowItems] = useState(false);
-
-    const handleClick = () => {
-        setShowItems(!showItems);
-    };
-
+const RestrauntCategory = ({ data, isActive, onClick }) => {
     return (
         <div className="rescat">
-            <div className="resitem" onClick={handleClick}>
+            <div className="resitem" onClick={onClick}>
                 <span>{data.title} ({data.itemCards.length})</span>
-                <span>{showItems ? "⬆️" : "⬇️"}</span>
+                <span>{isActive ? "⬆️" : "⬇️"}</span>
             </div>
-            {showItems && <ItemList items={data.itemCards} />}
+            {isActive && <ItemList items={data.itemCards} />}
         </div>
     );
 };

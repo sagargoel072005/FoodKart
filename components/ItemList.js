@@ -8,7 +8,7 @@ const ItemList = ({ items }) => {
           <div className="item-details">
             <h3 className="item-name">{item.card.info.name}</h3>
             <div className="item-price-rating">
-              <span className="item-price">₹{item.card.info.defaultPrice / 100}</span>
+              <span className="item-price">₹{item.card.info.price ? item.card.info.price /100 :item.card.info.defaultPrice /100 }</span>
               {item.card.info.ratings && (
                 <span className="item-rating">⭐ {item.card.info.ratings.aggregatedRating.rating} ({item.card.info.ratings.aggregatedRating.ratingCount})</span>
               )}
