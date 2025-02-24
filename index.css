@@ -37,13 +37,14 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px; 
-    justify-content: center;
+    justify-content:space-evenly;
 }
 
 /* Restaurant card styling */
 .res-card {
     background-color: white;
     width: 280px;
+    height: 400px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -121,7 +122,7 @@ a {
 }
 
 a:hover {
-    color: #007bff;
+    color: orangered;
 }
 
 .rating {
@@ -150,24 +151,6 @@ a:hover {
         color: rgb(253, 57, 8);
 }
 
- .log{
-    cursor: pointer;
-    width: 80px;
-    height: 30px;
-    font-weight: bold;
-    color: aliceblue;
-    background-color: rgb(253, 77, 8);
-    border-radius: 10px;
-    border: 1px solid rgb(253, 57, 8);
-    box-shadow: 0 10px 15px rgb(250, 120, 69);
-    transition: all 0.2s;
-} 
-.log:hover {
-    background-color: white;
-    box-shadow: 0 2px 15px rgb(253, 120, 69);
-    border: 1px solid rgb(253, 57, 8);
-    color: rgb(253, 57, 8);
-}
 .search {
     justify-content: center;
     margin: 20px 0;
@@ -785,7 +768,6 @@ h2 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* === Blog Section === */
 .blog {
   text-align: center;
   margin: 60px 0;
@@ -860,4 +842,168 @@ h2 {
     flex-direction: column;
     align-items: center;
   }
+}
+
+
+
+
+
+
+
+.extra_res {
+  display: flex;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent wrapping */
+  gap: 5px; /* Spacing between items */
+  padding: 5px;
+  scrollbar-width: thin; /* Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar in IE/Edge */
+}
+
+/* Hide scrollbar for WebKit browsers (Chrome, Safari) */
+.extra_res::-webkit-scrollbar {
+  height: 6px; /* Scrollbar height */
+}
+
+.extra_res::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.extra_res::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Individual restaurant card */
+.restaurant-card {
+  flex: 0 0 auto; /* Prevents wrapping */
+  text-align: center;
+  margin: 20px;
+}
+
+.restaurant-card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.restaurant-card img:hover {
+  transform: scale(1.1);
+}
+
+.h p {
+  font-size: 1.8rem; /* Slightly larger for better emphasis */
+  font-weight: 700; /* Stronger bold effect */
+  color: #222; /* A darker shade for contrast */
+  margin: 25px 0;
+  text-align: left;
+  padding: 10px 15px;
+  border-left: 6px solid #ff5722; /* Thicker and more pronounced left border */
+  letter-spacing: 1.2px;
+  background: linear-gradient(to right, #fff5f0, #ffffff); /* Soft gradient background */
+  border-radius: 5px; /* Smooth rounded corners */
+  display: inline-block; /* Prevents full width stretch */
+}
+
+.h p:hover {
+  color: #d84315; /* Darker orange for better hover effect */
+  border-left-color: #d84315; /* Changes left border on hover */
+  transition: all 0.3s ease-in-out;
+  transform: translateX(3px); /* Slight movement on hover */
+}
+
+
+
+
+
+/* Login Button */
+.log {
+  background: linear-gradient(45deg, #ff6600, #ff4500);
+  color: white;
+  width: 60px;
+  height: 20px;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.log:hover {
+  background: linear-gradient(45deg, #ff4500, #ff2200);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Logged-in User */
+.logged-in {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.user-icon {
+  font-size: 1.5rem;
+  color: #ff6600;
+}
+
+/* Logout Button */
+.logout-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: darkred;
+}
+
+/* Login Form */
+.login-form {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.login-form input {
+  width: 200px;
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-form button {
+  background: #ff6600;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background: #ff4500;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

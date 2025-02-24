@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import Shimmer from "./shimmer";
-import RestrauntCategory from "./RestrauntCategory";
+import RestrauntCategory from "./restrauntCategory";
 import { MENU_API } from "./utils/contants";
 
 const RestrauntMenu = () => {
